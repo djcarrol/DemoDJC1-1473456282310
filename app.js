@@ -48,7 +48,13 @@ app.post('/api/profile', function(req, res, next) {
     else
       return res.json(profile);
   });
+  app.get('/hello', function(req, res) {
+   res.send('<h1>This is a demonstration of how to add a new rest service</h1>')
 });
+
+});
+
+
 
 // error-handler settings
 require('./config/error-handler')(app);
