@@ -39,6 +39,12 @@ app.get('/', function(req, res) {
   res.render('index', { ct: req._csrfToken });
 });
 
+app.get('/hello', function(req, res) {
+   res.send('<h1>This is a demonstration of how to add a new rest service</h1>')
+});
+
+
+
 app.post('/api/profile', function(req, res, next) {
   var parameters = extend(req.body, { acceptLanguage : i18n.lng() });
 
